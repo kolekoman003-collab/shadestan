@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KoleGame — سرزمین بازی و جایزه</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Vazirmatn:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">🎮 KoleGame</div>
+    <nav class="main-nav">
+      <button class="nav-link active" data-page="home">خانه</button>
+      <button class="nav-link" data-page="games">بازی‌ها</button>
+      <button class="nav-link" data-page="hub">مرکز ✨</button><button class="nav-link" data-page="bank">بانک</button>
+      <button class="nav-link" data-page="leaderboard">لیدربورد</button>
+      <button class="nav-link" data-page="friends">دوستان</button>
+      <button class="nav-link" data-page="account">حساب من</button>
+    </nav>
+    <div class="coin-badge" id="coinBadge" hidden>🪙 <span id="coinCount">0</span></div>
+  </div>
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>🎮 بازی کن</span><span>🪙 KoleCoin بگیر</span><span>🎁 جایزه روزانه</span><span>🎡 گردونه هر ۶ ساعت</span><span>🎟️ لاتاری ۶ ساعته</span><span>🏆 لول بگیر</span><span>💸 انتقال KoleCoin</span><span>🎰 بخش شانس</span>
+      <span>🎮 بازی کن</span><span>🪙 KoleCoin بگیر</span><span>🎁 جایزه روزانه</span><span>🎡 گردونه هر ۶ ساعت</span><span>🎟️ لاتاری ۶ ساعته</span><span>🏆 لول بگیر</span><span>💸 انتقال KoleCoin</span><span>🎰 بخش شانس</span>
+    </div>
+  </div>
+</header>
+
+<main id="app">
+
+  <!-- HOME -->
+  <section class="page active" id="page-home">
+    <div class="hero" style="position:relative;">
+      <span class="floaty" style="top:0; left:8%;">🎈</span>
+      <span class="floaty" style="top:20px; right:10%; animation-delay:0.8s;">🌸</span>
+      <span class="floaty" style="bottom:10px; left:20%; animation-delay:1.6s;">⭐</span>
+      <h1>یه گوشه‌ی کوچیک از دنیا،<br>فقط برای سرگرمی 🎉</h1>
+      <p>بازی کن، سکه جمع کن، تو بانک سرمایه‌گذاری کن، یا یه‌کم خلاف کن و از دست پلیس فرار کن. با دوستات رقابت کن و ببین کی بالاتره!</p>
+      <button class="btn btn-primary btn-lg" id="heroCta">بزن بریم 🚀</button>
+    </div>
+    <div class="marquee marquee-reverse">
+      <div class="marquee-track">
+        <span>✨</span><span>🎲</span><span>🍭</span><span>🎨</span><span>🎯</span><span>🧩</span><span>🎪</span><span>🌈</span>
+        <span>✨</span><span>🎲</span><span>🍭</span><span>🎨</span><span>🎯</span><span>🧩</span><span>🎪</span><span>🌈</span>
+      </div>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-emoji">🎮</div>
+        <h3>چند تا بازی متفاوت</h3>
+        <p>از بازی حافظه تا کوییز و فرار از پلیس — هر روز یه چیز جدید.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-emoji">🏦</div>
+        <h3>بانک با سود روزانه</h3>
+        <p>سکه‌هاتو بذار تو بانک، هر روز که برگردی یه‌کم بیشتر شده.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-emoji">🏆</div>
+        <h3>لیدربورد زنده</h3>
+        <p>با همه بازیکن‌ها رقابت کن و اسمتو ببر بالای جدول.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAMES -->
+  <section class="page" id="page-games">
+    <h2 class="page-title">🎮 آرکید KoleGame</h2>
+    <p class="page-sub">بازی کن، XP و <strong>KoleCoin</strong> بگیر و لولت رو بالا ببر.</p>
+    <div class="game-grid">
+
+      <div class="game-card">
+        <div class="game-emoji">⚡</div>
+        <h3>کلیک سریع</h3>
+        <p>وقتی صفحه سبز شد سریع کلیک کن. هرچی سریع‌تر، سکه بیشتر.</p>
+        <button class="btn btn-secondary" data-open-game="reaction">بازی کن</button>
+      </div>
+
+      <div class="game-card">
+        <div class="game-emoji">🧠</div>
+        <h3>بازی حافظه</h3>
+        <p>کارت‌های همسان رو با کمترین تلاش پیدا کن.</p>
+        <button class="btn btn-secondary" data-open-game="memory">بازی کن</button>
+      </div>
+
+      <div class="game-card">
+        <div class="game-emoji">❓</div>
+        <h3>کوییز روزانه</h3>
+        <p>به سوالای امروز جواب بده و سکه بگیر.</p>
+        <button class="btn btn-secondary" data-open-game="quiz">بازی کن</button>
+      </div>
+
+      <div class="game-card game-card-danger">
+        <div class="game-emoji">🚓</div>
+        <h3>فرار از پلیس</h3>
+        <p>یه سرقت کوچیک بزن! باید تند تند کلیک کنی تا فرار کنی، وگرنه دستگیر می‌شی.</p>
+        <button class="btn btn-danger" data-open-game="heist">شروع خلاف</button>
+      </div>
+
+      <div class="game-card">
+        <div class="game-emoji">⭐</div>
+        <h3>ستاره‌گیری</h3>
+        <p>۱۵ ثانیه وقت داری، هرچی می‌تونی ستاره بگیر.</p>
+        <button class="btn btn-secondary" data-open-game="starcatch">بازی کن</button>
+      </div>
+
+      <div class="game-card">
+        <div class="game-emoji">🔨</div>
+        <h3>موش بزن</h3>
+        <p>موش‌ها رو قبل از قایم شدن بزن!</p>
+        <button class="btn btn-secondary" data-open-game="whackamole">بازی کن</button>
+      </div>
+
+      <div class="game-card">
+        <div class="game-emoji">✂️</div>
+        <h3>سنگ کاغذ قیچی</h3>
+        <p>سه دست ببر و جایزه بگیر.</p>
+        <button class="btn btn-secondary" data-open-game="rps">بازی کن</button>
+      </div>
+
+      <div class="game-card">
+        <div class="game-emoji">🔢</div>
+        <h3>حدس عدد</h3>
+        <p>یه عدد بین ۱ تا ۵۰ رو با کمترین حدس پیدا کن.</p>
+        <button class="btn btn-secondary" data-open-game="guess">بازی کن</button>
+      </div>
+
+
+      <div class="game-card special-card">
+        <div class="game-emoji">🎡</div><h3>گردونه شانس</h3>
+        <p>هر ۶ ساعت یک اسپین رایگان با جایزه‌های متنوع.</p>
+        <button class="btn btn-primary" data-open-game="wheel">چرخوندن</button>
+      </div>
+      <div class="game-card special-card">
+        <div class="game-emoji">🎟️</div><h3>لاتاری ۶ ساعته</h3>
+        <p>هر بلیت ۵۰ KoleCoin؛ بلیت بیشتر یعنی شانس بیشتر.</p>
+        <button class="btn btn-primary" data-open-game="lottery">ورود به لاتاری</button>
+      </div>
+      <div class="game-card game-card-danger">
+        <div class="game-emoji">🎰</div><h3>کازینو KoleGame</h3>
+        <p>شانس مجازی با KoleCoin: اسلات، تاس و شیر یا خط.</p>
+        <button class="btn btn-danger" data-open-game="casino">ورود</button>
+      </div>
+      <div class="game-card"><div class="game-emoji">🎯</div><h3>تیراندازی هدف</h3><p>هدف‌ها رو سریع پیدا کن و امتیاز جمع کن.</p><button class="btn btn-secondary" data-open-game="aim">بازی کن</button></div>
+      <div class="game-card"><div class="game-emoji">🧩</div><h3>عدد گمشده</h3><p>الگوی عددی رو پیدا کن و رکورد بزن.</p><button class="btn btn-secondary" data-open-game="sequence">بازی کن</button></div>
+      <div class="game-card"><div class="game-emoji">🚀</div><h3>فرار موشکی</h3><p>در چند ثانیه مسیر امن رو انتخاب کن.</p><button class="btn btn-secondary" data-open-game="rocket">بازی کن</button></div>
+
+      <div class="game-card game-card-danger">
+        <div class="game-emoji">🎰</div>
+        <h3>شیر یا خط</h3>
+        <p>شرط ببند، اگه درست حدس بزنی دو برابر می‌گیری!</p>
+        <button class="btn btn-danger" data-open-game="coinflip">شرط ببند</button>
+      </div>
+
+      <div class="game-card">
+        <div class="game-emoji">⭕</div>
+        <h3>دوز</h3>
+        <p>با کامپیوتر دوز بازی کن و ببرش.</p>
+        <button class="btn btn-secondary" data-open-game="tictactoe">بازی کن</button>
+      </div>
+
+    </div>
+
+    <!-- game modal -->
+    <div class="modal-overlay" id="gameModal" hidden>
+      <div class="modal">
+        <button class="modal-close" id="closeGameModal">✕</button>
+        <div id="gameModalBody"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KOLE HUB -->
+  <section class="page" id="page-hub">
+    <h2 class="page-title">✨ مرکز KoleGame</h2>
+    <div class="hub-grid">
+      <div class="stat-panel"><span>لول</span><strong id="levelValue">1</strong><div class="xp-track"><div id="xpFill"></div></div><small id="xpValue">0 XP</small></div>
+      <div class="stat-panel"><span>استریک</span><strong id="streakValue">0 روز</strong><small>هر روز وارد شو و زنجیره رو نگه دار.</small></div>
+    </div>
+    <div class="hub-actions">
+      <button class="btn btn-primary" data-open-game="wheel">🎡 گردونه</button>
+      <button class="btn btn-secondary" data-open-game="lottery">🎟️ لاتاری</button>
+      <button class="btn btn-outline" id="transferOpenBtn">💸 انتقال KoleCoin</button>
+    </div>
+    <div id="transferPanel" class="feature-panel" hidden>
+      <h3>💸 انتقال KoleCoin</h3><p>نام کاربری گیرنده و مقدار رو وارد کن.</p>
+      <div class="inline-form"><input id="transferUsername" type="text" placeholder="نام کاربری"><input id="transferAmount" type="number" min="1" placeholder="KoleCoin"><button id="transferBtn" class="btn btn-primary">انتقال</button></div>
+    </div>
+  </section>
+
+  <!-- BANK -->
+  <section class="page" id="page-bank">
+    <h2 class="page-title">🏦 بانک KoleCoin</h2>
+    <p class="page-sub">سکه‌هاتو امن نگه دار و هر روز یه‌کم سود بگیر.</p>
+    <div class="bank-panel">
+      <div class="bank-stat">
+        <span class="bank-label">موجودی نقدی</span>
+        <span class="bank-value" id="bankCash">۰ 🪙</span>
+      </div>
+      <div class="bank-stat">
+        <span class="bank-label">موجودی بانک</span>
+        <span class="bank-value" id="bankSaved">۰ 🪙</span>
+      </div>
+      <div class="bank-actions">
+        <input type="number" id="bankAmount" placeholder="مقدار سکه" min="1">
+        <button class="btn btn-secondary" id="depositBtn">واریز به بانک</button>
+        <button class="btn btn-secondary" id="withdrawBtn">برداشت از بانک</button>
+      </div>
+      <button class="btn btn-primary" id="claimInterestBtn">دریافت سود روزانه 🎁</button>
+      <p class="bank-note">سود روزانه ۵٪ از موجودی بانکته و هر ۲۴ ساعت یه بار قابل دریافته.</p>
+    </div>
+  </section>
+
+  <!-- LEADERBOARD -->
+  <section class="page" id="page-leaderboard">
+    <h2 class="page-title">🏆 لیدربورد KoleGame</h2>
+    <p class="page-sub">بهترین بازیکن‌های KoleGame</p>
+    <table class="leaderboard-table">
+      <thead><tr><th>رتبه</th><th>بازیکن</th><th>سکه</th></tr></thead>
+      <tbody id="leaderboardBody"></tbody>
+    </table>
+  </section>
+
+  <!-- FRIENDS -->
+  <section class="page" id="page-friends">
+    <h2 class="page-title">👯 دوستان</h2>
+    <div class="friend-add">
+      <input type="text" id="friendUsername" placeholder="نام کاربری دوستت">
+      <button class="btn btn-secondary" id="addFriendBtn">اضافه کردن دوست</button>
+    </div>
+    <ul class="friend-list" id="friendList"></ul>
+  </section>
+
+  <!-- ACCOUNT -->
+  <section class="page" id="page-account">
+    <div id="authBox">
+      <h2 class="page-title">👤 حساب KoleGame</h2>
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-auth="login">ورود</button>
+        <button class="auth-tab" data-auth="signup">ثبت‌نام</button>
+      </div>
+
+      <form id="loginForm" class="auth-form">
+        <input type="email" id="loginEmail" placeholder="ایمیل" required>
+        <input type="password" id="loginPassword" placeholder="رمز عبور" required>
+        <button type="submit" class="btn btn-primary">ورود</button>
+        <p class="auth-error" id="loginError"></p>
+      </form>
+
+      <form id="signupForm" class="auth-form" hidden>
+        <input type="text" id="signupUsername" placeholder="نام کاربری" required>
+        <input type="email" id="signupEmail" placeholder="ایمیل" required>
+        <input type="password" id="signupPassword" placeholder="رمز عبور (حداقل ۶ کاراکتر)" required>
+        <button type="submit" class="btn btn-primary">ساخت حساب</button>
+        <p class="auth-error" id="signupError"></p>
+      </form>
+    </div>
+
+    <div id="dashboardBox" hidden>
+      <h2 class="page-title">سلام، <span id="dashUsername"></span> 👋</h2>
+      <div class="dash-grid">
+        <div class="dash-card"><span>KoleCoin</span><strong id="dashCoins">۰</strong></div>
+        <div class="dash-card"><span>بانک</span><strong id="dashBank">۰</strong></div><div class="dash-card"><span>لول</span><strong id="dashLevel">1</strong></div>
+      </div>
+      <button class="btn btn-primary" id="dailyBonusBtn">دریافت جایزه روزانه 🎁</button> <button class="btn btn-secondary" id="hubBtn">مرکز KoleGame ✨</button>
+      <button class="btn btn-outline" id="logoutBtn">خروج از حساب</button>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>KoleGame © ۱۴۰۵ — بازی، رقابت و KoleCoin 🎮</p>
+  <div class="social-links">
+    <a href="#">اینستاگرام</a>
+    <a href="#">تلگرام</a>
+    <a href="#">توییتر</a>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js?v=3"></script>
+<script src="js/app.js?v=3"></script>
+<script src="js/economy.js?v=3"></script>
+<script src="js/auth.js?v=3"></script>
+<script src="js/bank.js?v=3"></script>
+<script src="js/friends.js?v=3"></script>
+<script src="js/leaderboard.js?v=3"></script>
+<script src="js/games.js?v=3"></script>
+</body>
+</html>
